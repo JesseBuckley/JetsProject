@@ -9,7 +9,7 @@ public class CargoJet extends PassengerJet implements CargoCarrier {
 
 	@Override
 	public void loadCargo() {
-		System.out.println("loading that cargo...");
+		System.out.println("Loading all cargo into CargoJet.");
 	}
 
 }

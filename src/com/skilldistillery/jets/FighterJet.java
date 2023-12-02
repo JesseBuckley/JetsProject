@@ -9,6 +9,6 @@ public class FighterJet extends PilotOnlyJet implements CombatReady {
 
 	@Override
 	public void fight() {
-		System.out.println("totally mctotally fighting rn");
+		System.out.println("This fighter jet fights!");
 	}
 }

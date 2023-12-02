@@ -14,11 +14,11 @@ public class JetsApplication {
 	}
 
 	public void launch() {
-		Jet cargoJet1 = new CargoJet("Cargo Spanker 9000", 250, 2000, 2_000_000);
-		Jet cargoJet2 = new CargoJet("Cargo Haul Master General", 300, 2250, 2_500_000);
-		Jet airbusA380 = new AirbusA380("Prince Habood's AirbusA380", 500, 8000, 18_500_000);
-		Jet fighterJet1 = new FighterJet("F22 Fighter", 850, 1250, 12_000_000);
-		Jet fighterJet2 = new FighterJet("F14 Fighter", 600, 1000, 4_000_000);
+		Jet cargoJet1 = new CargoJet("Cargo Jet o' Glory", 380, 2000, 4_000_000);
+		Jet cargoJet2 = new CargoJet("Cargo Haul Master General", 230, 1250, 2_500_000);
+		Jet airbusA380 = new AirbusA380("Saudi Prince Alwaleed bin Talal's AirbusA380", 350, 4000, 18_500_000);
+		Jet fighterJet1 = new FighterJet("F22 Fighter", 750, 800, 12_000_000);
+		Jet fighterJet2 = new FighterJet("F14 Fighter", 500, 900, 4_000_000);
 		airField.addJet(cargoJet1);
 		airField.addJet(cargoJet2);
 		airField.addJet(airbusA380);
@@ -38,7 +38,7 @@ public class JetsApplication {
 				System.out.println(
 						"Welcome to the Airfield. Please decide between one of the options below, or (Quit) to exit the program");
 			} else if (count >= 1) {
-				System.out.println("\n\nSelect (Quit(9)) at any time to exit the program.\n");
+				System.out.println("\nSelect (Quit(9)) at any time to exit the program.");
 			}
 			System.out.println("\n1. List fleet");
 			System.out.println("2. Fly all jets");
@@ -55,13 +55,15 @@ public class JetsApplication {
 				listJets();
 				count++;
 			} else if (option == 2) {
-				System.out.println("\n(2)The jets below are flying! \n");
+				System.out.println("\n(2)The jets below are flying: \n");
 				flyJets();
 				count++;
 			} else if (option == 3) {
+				System.out.println("(3)Below is the fastest jet.\n");
 				viewFastestJet();
 				count++;
 			} else if (option == 4) {
+				System.out.println("(4)Below is the longest range jet.\n");
 				viewLongestRange();
 				count++;
 			} else if (option == 5) {
@@ -88,19 +90,19 @@ public class JetsApplication {
 	}
 
 	private void dogFight() {
-
+		airField.fightFighter();
 	}
 
 	private void loadAllCargo() {
-
+		airField.loadCargo();
 	}
 
 	private void viewLongestRange() {
-
+		airField.printLongestRangeJet();
 	}
 
 	private void viewFastestJet() {
-
+		airField.printFastestJet();
 	}
 
 	private void flyJets() {
