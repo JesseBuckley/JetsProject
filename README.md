@@ -2,10 +2,13 @@
 
 
 #Project Description
+
 -The JetsProject takes user input to cycle through a menu of 9 options until the user selects (9) which ends the program. See the menu example in How to Run. 
 
 -Using a array list when the program runs 5 generic Jets are generated into the array.
+
 # How to Run
+
 -You run the program by opening the JetsApplication class file. It is the only file containing a main method.
 
 -You will be prompted by this menu:
@@ -29,13 +32,17 @@
 ------(9) Quit
 
 -Once you are finished with selecting anything you like select quit to end the program.
+
 #Class Structure
+
 -The project uses a abstract "Jet" class which is then extended by a "PassengerJet" class and also a "PilotOnlyJet" class.
 
 -Using the classes above there are two subclasses of PassengerJet and one subclass of PilotOnlyJet.
 
 -There are two interfaces. One for PassengerJet's subclass "CargoJet". The other for PilotOnlyJet's subclass "FighterJet".
+
 #Technologies/Topics used
+
 -Sublime text editor
 
 -Java JVM/JDK 
@@ -52,6 +59,6 @@
 
 -The logic for a lot of the methods in this project I was stumped by for a bit of time, but they were all solvable with some review. 
 
-----I will update this line if I find time to do the stretch goals----
+----I will update this line if I find enough time to do the stretch goals----
 
 
