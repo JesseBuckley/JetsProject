@@ -58,6 +58,8 @@ public class AirField {
 				((AirbusA380) jet).fly();
 			} else if (jet instanceof FighterJet) {
 				((FighterJet) jet).fly();
+			} else {
+				jet.fly();
 			}
 		}
 	}
@@ -94,7 +96,18 @@ public class AirField {
 		
 			System.out.println("Jet added successfully.");
 		}		
-		public void removeUserJet(Jet jet) {
-		
+		public void removeUserJet(Scanner sc) {
+			System.out.println("-----------------Enter the number of the jet you would like to remove-----------------\n");
+		for (int i = 0; i < jets.size(); i++) {
+			System.out.println("(" + i + ") " + jets.get(i) + "\n");
+		}
+		if (jets.size() >= 1) {
+			int userChoice = sc.nextInt();
+			jets.remove(userChoice);
+		} else if (jets.size() == 0) {
+			System.out.println("THERE ARE NO MORE JETS YOU DELETED THEM.");
+			return;
+		}
+		System.out.println("Jet removed successfully.");
 	}
 }

@@ -37,56 +37,56 @@ public class JetsApplication {
 		do {
 			if (count == 0) {
 				System.out.println(
-						"Welcome to the Airfield. Please decide between one of the options below, or (Quit) to exit the program");
+						"-----Welcome to the Airfield. Please decide between one of the options below, or (Quit) to exit the program-----");
 			} else if (count >= 1) {
 				System.out.println("\nSelect (Quit(9)) at any time to exit the program.");
 			}
-			System.out.println("\n1. List fleet");
-			System.out.println("2. Fly all jets");
-			System.out.println("3. View fastest jet");
-			System.out.println("4. View jet with longest range");
-			System.out.println("5. Load all Cargo Jets");
-			System.out.println("6. Dogfight!");
-			System.out.println("7. Add a jet to Fleet");
-			System.out.println("8. Remove a jet from Fleet");
-			System.out.println("9. Quit");
+			System.out.println("\n---(1) List fleet");
+			System.out.println("---(2) Fly all jets");
+			System.out.println("---(3) View fastest jet");
+			System.out.println("---(4) View jet with longest range");
+			System.out.println("---(5) Load all Cargo Jets");
+			System.out.println("---(6) Dogfight!");
+			System.out.println("---(7) Add a jet to Fleet");
+			System.out.println("---(8) Remove a jet from Fleet");
+			System.out.println("------(9) Quit");
 			option = sc.nextInt();
 			if (option == 1) {
-				System.out.println("\n(1)Below is a full list of the fleet:\n");
+				System.out.println("\n----------(1)Below is a full list of the fleet----------\n");
 				listJets();
 				count++;
 			} else if (option == 2) {
-				System.out.println("\n(2)The jets below are flying: \n");
+				System.out.println("\n----------(2)The jets below are flying----------\n");
 				flyJets();
 				count++;
 			} else if (option == 3) {
-				System.out.println("(3)Below is the fastest jet.\n");
+				System.out.println("----------(3)Below is the fastest jet----------\n");
 				viewFastestJet();
 				count++;
 			} else if (option == 4) {
-				System.out.println("(4)Below is the longest range jet.\n");
+				System.out.println("----------(4)Below is the longest range jet----------\n");
 				viewLongestRange();
 				count++;
 			} else if (option == 5) {
-				System.out.println("(5)Below are the CargoJet(s) loading their cargo:");
+				System.out.println("----------(5)Below are the CargoJet(s) loading their cargo----------\n");
 				loadAllCargo();
 				count++;
 			} else if (option == 6) {
-				System.out.println("(6)Below are the FighterJet(s) fighting:");
+				System.out.println("----------(6)Below are the FighterJet(s) fighting----------");
 				dogFight();
 				count++;
 			} else if (option == 7) {
-				System.out.println("(7)Follow the directions below to build your new Jet!\n");
+				System.out.println("----------(7)Follow the directions below to build your new jet----------\n");
 				addJet();
 				count++;
 			} else if (option == 8) {
 				removeJet();
 				count++;
 			} else if (option == 9) {
-				System.out.println("(9)You have decided to exit the program. See ya!");
+				System.out.println("----------(9)You have decided to exit the program. See ya!----------");
 				stillDisplaying = false;
 			} else {
-				System.out.println("Invalid input please decide between 1-9");
+				System.out.println("----------Invalid input please decide between 1-9----------");
 				count++;
 			}
 		} while (stillDisplaying == true);
@@ -97,7 +97,7 @@ public class JetsApplication {
 	}
 
 	private void removeJet() {
-
+		airField.removeUserJet(sc);
 	}
 
 	private void dogFight() {
