@@ -1,6 +1,7 @@
 package com.skilldistillery.jets;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class AirField {
 	private ArrayList<Jet> jets;
@@ -10,7 +11,7 @@ public class AirField {
 	}
 
 	public void addJet(Jet jet) {
-		jets.add(jet);
+			jets.add(jet);
 	}
 
 	public Jet fastestJet() {
@@ -77,5 +78,23 @@ public class AirField {
 				((FighterJet) jet).fight();
 			}
 		}
+	}
+	//I made a second scanner because nextLine was starting to be a massive problem. This seemed to fix it. I wanted to be able to use spaces in model. 
+	public void addUserJet(Scanner sc, Scanner forNextLines) {
+			System.out.println("Enter model name for the new Jet");
+			String model = forNextLines.nextLine();
+			System.out.println("Enter a speed in MPH, can be a decimal if you like.");
+			double speed = sc.nextDouble();
+			System.out.println("Enter a range this jet can travel before running out of fuel.");
+			int range = sc.nextInt();
+			System.out.println("Enter a price for the jet.");
+			long price = sc.nextLong();
+			Jet userJet = new PassengerJet(model, speed, range, price);
+			jets.add(userJet);
+		
+			System.out.println("Jet added successfully.");
+		}		
+		public void removeUserJet(Jet jet) {
+		
 	}
 }

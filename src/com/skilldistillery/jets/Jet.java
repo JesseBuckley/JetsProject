@@ -12,7 +12,8 @@ public abstract class Jet {
 		System.out.print("Speed: " + this.speed + "MPH, ");
 		System.out.print("Range: " + this.range + ", ");
 		System.out.print("Price: " + this.price + "USD, ");
-		System.out.printf("Your flight time is before running out of fuel is: " + "%.2f", flightTime); System.out.print("hrs.\n");
+		System.out.printf("Flight time before running out of fuel is: " + "%.2f", flightTime);
+		System.out.print("hrs.\n");
 	}
 
 	public Jet(String model, double speed, int range, long price) {
@@ -57,6 +58,7 @@ public abstract class Jet {
 
 	@Override
 	public String toString() {
-		return "Jet Model: " + model + ", Top speed: " + speed + "MPH, Max range: " + range + ", Price: " + price +"USD";
+		return "Jet Model: " + model + ", Top speed: " + speed + "MPH, Max range: " + range + ", Price: " + price
+				+ "USD";
 	}
 }

@@ -6,6 +6,7 @@ public class JetsApplication {
 
 	private AirField airField = new AirField();
 	private Scanner sc = new Scanner(System.in);
+	private Scanner forNextLines = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		JetsApplication app = new JetsApplication();
@@ -16,7 +17,7 @@ public class JetsApplication {
 	public void launch() {
 		Jet cargoJet1 = new CargoJet("Cargo Jet o' Glory", 380, 2000, 4_000_000);
 		Jet cargoJet2 = new CargoJet("Cargo Haul Master General", 230, 1250, 2_500_000);
-		Jet airbusA380 = new AirbusA380("Saudi Prince Alwaleed bin Talal's AirbusA380", 350, 4000, 18_500_000);
+		Jet airbusA380 = new AirbusA380("Saudi Prince Alwaleed bin Talal's Airbus A380", 350, 4000, 18_500_000);
 		Jet fighterJet1 = new FighterJet("F22 Fighter", 750, 800, 12_000_000);
 		Jet fighterJet2 = new FighterJet("F14 Fighter", 500, 900, 4_000_000);
 		airField.addJet(cargoJet1);
@@ -25,10 +26,10 @@ public class JetsApplication {
 		airField.addJet(fighterJet1);
 		airField.addJet(fighterJet2);
 
-		displayMenu_AndChooseOption();
+		displayMenu_ChooseOption();
 	}
 
-	public void displayMenu_AndChooseOption() {
+	public void displayMenu_ChooseOption() {
 		int option;
 		int count = 0;
 		boolean stillDisplaying = true;
@@ -67,10 +68,16 @@ public class JetsApplication {
 				viewLongestRange();
 				count++;
 			} else if (option == 5) {
+				System.out.println("(5)Below are the CargoJet(s) loading their cargo:");
 				loadAllCargo();
 				count++;
 			} else if (option == 6) {
+				System.out.println("(6)Below are the FighterJet(s) fighting:");
 				dogFight();
+				count++;
+			} else if (option == 7) {
+				System.out.println("(7)Follow the directions below to build your new Jet!\n");
+				addJet();
 				count++;
 			} else if (option == 8) {
 				removeJet();
@@ -83,6 +90,10 @@ public class JetsApplication {
 				count++;
 			}
 		} while (stillDisplaying == true);
+	}
+
+	private void addJet() {
+		airField.addUserJet(sc, forNextLines);
 	}
 
 	private void removeJet() {
