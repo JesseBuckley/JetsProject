@@ -61,6 +61,3 @@
 
 -Scanner.nextLine(); can be a massive pain.
 
-----Update when I complete the stretch goals----
-
-
