@@ -59,6 +59,8 @@
 
 -The logic for a lot of the methods in this project I was stumped by for a bit of time, but they were all solvable with some review. 
 
-----I will update this line if I find enough time to do the stretch goals----
+-Scanner.nextLine(); can be a massive pain.
+
+----Update when I complete the stretch goals----
 
 

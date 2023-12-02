@@ -1,6 +1,7 @@
 package com.skilldistillery.jets;
 
 import java.util.Scanner;
+//Making a secondary scanner for nextLine()s ended up being my solution for Scanner.nextLine()s bug. I pass them both over to my AirField for the userInput portion addJet and removeJet.
 
 public class JetsApplication {
 
@@ -11,10 +12,9 @@ public class JetsApplication {
 	public static void main(String[] args) {
 		JetsApplication app = new JetsApplication();
 		app.launch();
-
 	}
-
-	public void launch() {
+//Other than launch, and displayMenu. Every method listed below has its logic located in the AirField class.
+	private void launch() {
 		Jet cargoJet1 = new CargoJet("Cargo Jet o' Glory", 380, 2000, 4_000_000);
 		Jet cargoJet2 = new CargoJet("Cargo Haul Master General", 230, 1250, 2_500_000);
 		Jet airbusA380 = new AirbusA380("Saudi Prince Alwaleed bin Talal's Airbus A380", 350, 4000, 18_500_000);
@@ -25,11 +25,10 @@ public class JetsApplication {
 		airField.addJet(airbusA380);
 		airField.addJet(fighterJet1);
 		airField.addJet(fighterJet2);
-
 		displayMenu_ChooseOption();
 	}
 
-	public void displayMenu_ChooseOption() {
+	private void displayMenu_ChooseOption() {
 		int option;
 		int count = 0;
 		boolean stillDisplaying = true;
@@ -51,6 +50,7 @@ public class JetsApplication {
 			System.out.println("---(8) Remove a jet from Fleet");
 			System.out.println("------(9) Quit");
 			option = sc.nextInt();
+
 			if (option == 1) {
 				System.out.println("\n----------(1)Below is a full list of the fleet----------\n");
 				listJets();
@@ -80,6 +80,7 @@ public class JetsApplication {
 				addJet();
 				count++;
 			} else if (option == 8) {
+				System.out.println("----------(8)Enter the number of the jet you would like to remove----------\n");
 				removeJet();
 				count++;
 			} else if (option == 9) {
@@ -120,7 +121,7 @@ public class JetsApplication {
 		airField.flyAllJets();
 	}
 
-	public void listJets() {
+	private void listJets() {
 		airField.listJets();
 	}
 }

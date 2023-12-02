@@ -81,7 +81,13 @@ public class AirField {
 			}
 		}
 	}
-	//I made a second scanner because nextLine was starting to be a massive problem. This seemed to fix it. I wanted to be able to use spaces in model. 
+    /* The methods below are where I pass the scanners for userInput.
+     * 
+     * I made a secondary scanner because nextLine was starting to be a bit of a pain. This seems to fix it. 
+	 * I wanted to be able to use spaces in model and not accidentally be trying to put a model
+	 * Instead getting error from putting letters in a scanner for doubles. 
+	 */
+	
 	public void addUserJet(Scanner sc, Scanner forNextLines) {
 			System.out.println("Enter model name for the new Jet");
 			String model = forNextLines.nextLine();
@@ -94,10 +100,9 @@ public class AirField {
 			Jet userJet = new PassengerJet(model, speed, range, price);
 			jets.add(userJet);
 		
-			System.out.println("Jet added successfully.");
+			System.out.println("Jet added successfully.\n");
 		}		
 		public void removeUserJet(Scanner sc) {
-			System.out.println("-----------------Enter the number of the jet you would like to remove-----------------\n");
 		for (int i = 0; i < jets.size(); i++) {
 			System.out.println("(" + i + ") " + jets.get(i) + "\n");
 		}
