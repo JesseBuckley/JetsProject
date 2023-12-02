@@ -1,7 +1,7 @@
 # JetsProject
 
 
-#Project Description
+# Project Description
 
 -The JetsProject takes user input to cycle through a menu of 9 options until the user selects (9) which ends the program. See the menu example in How to Run. 
 
@@ -33,7 +33,7 @@
 
 -Once you are finished with selecting anything you like select quit to end the program.
 
-#Class Structure
+# Class Structure
 
 -The project uses a abstract "Jet" class which is then extended by a "PassengerJet" class and also a "PilotOnlyJet" class.
 
@@ -41,7 +41,7 @@
 
 -There are two interfaces. One for PassengerJet's subclass "CargoJet". The other for PilotOnlyJet's subclass "FighterJet".
 
-#Technologies/Topics used
+# Technologies/Topics used
 
 -Sublime text editor
 
@@ -50,7 +50,7 @@
 -Eclipse IDE/Eclipse README
 
 -Google
-#Lessons Learned
+# Lessons Learned
 -The homework just last week I was struggling to call non-static methods. That is now a problem of the past, there are and were more difficult challenges ahead.
 
 -I was challenged by this assignment mentally more than I have been up until now. I am learning more in the past few weeks then I could of imagined.
